@@ -13,7 +13,6 @@ env/
 .coverage
 htmlcov/
 demo_output/
-*.png
 *.pdf
 *.kml
 *.geojson
