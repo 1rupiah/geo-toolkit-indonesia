@@ -14,7 +14,7 @@ Available for **freelance**, **consulting**, **contract**, and **full-time** opp
 
 ## Overview
 
-**GeoToolkit Indonesia** is a professional-grade Python toolkit for geoscience and survey workflows, built specifically for the Indonesian context - covering coordinate systems, geodetic calculations, well-log data processing, GIS export, and borehole visualization.
+**Geo-Toolkit Indonesia** is a professional-grade Python toolkit for geoscience and survey workflows, built specifically for the Indonesian context - covering coordinate systems, geodetic calculations, well-log data processing, GIS export, and borehole visualization.
 
 The toolkit addresses a common pain point in Indonesian O&G and geoscience workflows: the lack of a unified, open-source Python library that handles Indonesia-specific geodetic parameters (UTM zones 46–54, WGS84/DGN95 datums), standard well-log formats (LAS 2.0), and GIS export to formats compatible with tools used in the field (QGIS, ArcGIS, Google Earth).
 
@@ -54,7 +54,7 @@ Geographic survey line plot with labelled stations, direction arrow, total line 
 
 Full test documentation is available in the repository:
 
-[GeoToolkit Indonesia - Test Report (Excel)](https://github.com/1rupiah/geo-toolkit-indonesia/raw/main/docs/GeoToolkit%20Indonesia%20-%20Test%20Report.xlsx)
+[Geo-Toolkit Indonesia - Test Report (Excel)](https://github.com/1rupiah/geo-toolkit-indonesia/raw/main/docs/Geo-Toolkit%20Indonesia%20-%20Test%20Report.xlsx)
 
 53 tests across 6 test classes. All passed.
 
@@ -78,7 +78,7 @@ geo-toolkit-indonesia/
 ├── docs/
 │   ├── borehole_log_plot.png       # Sample borehole visualization output
 │   ├── survey_line_plot.png        # Sample survey line visualization output
-│   └── GeoToolkit Indonesia - Test Report.xlsx
+│   └── Geo-Toolkit Indonesia - Test Report.xlsx
 ├── tests/
 │   └── test_all_modules.py         # 53 unit + integration tests
 ├── demo.py                         # Automated demonstration script
@@ -280,7 +280,7 @@ python -m pytest tests/ -v --cov=geo_toolkit_indonesia --cov-report=term-missing
 | Visualization         | 8     | Figure return, PNG file save, input validation                     |
 | Integration           | 3     | End-to-end pipelines across multiple modules                       |
 
-Full test documentation: [GeoToolkit Indonesia - Test Report](https://github.com/1rupiah/geo-toolkit-indonesia/raw/main/docs/GeoToolkit%20Indonesia%20-%20Test%20Report.xlsx)
+Full test documentation: [Geo-Toolkit Indonesia - Test Report](https://github.com/1rupiah/geo-toolkit-indonesia/raw/main/docs/Geo-Toolkit%20Indonesia%20-%20Test%20Report.xlsx)
 
 ---
 
@@ -290,7 +290,7 @@ Full test documentation: [GeoToolkit Indonesia - Test Report](https://github.com
 
 His experience spans geoscience fieldwork and interpretation, O&G project management, commercial management, and technology delivery across enterprise and government accounts in Indonesia.
 
-**GeoToolkit Indonesia** reflects a core belief: that deep domain knowledge, when combined with software engineering skills, produces tools that are genuinely useful - not just technically correct, but built around how geoscientists and engineers actually work. The coordinate systems are the ones used in Indonesian surveys. The well-log format is the one actually produced by logging tools in the field. The GIS export formats are the ones opened by the tools sitting on every geoscientist's desktop.
+**Geo-Toolkit Indonesia** reflects a core belief: that deep domain knowledge, when combined with software engineering skills, produces tools that are genuinely useful - not just technically correct, but built around how geoscientists and engineers actually work. The coordinate systems are the ones used in Indonesian surveys. The well-log format is the one actually produced by logging tools in the field. The GIS export formats are the ones opened by the tools sitting on every geoscientist's desktop.
 
 Open to freelance projects, consulting engagements, contract roles, and full-time opportunities in geoscience technology, digital transformation, data analytics, and software delivery.
 
