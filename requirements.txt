@@ -1,0 +1,7 @@
+pyproj>=3.4.0
+lasio>=0.31
+numpy>=1.21
+matplotlib>=3.5
+scipy>=1.9
+pytest>=7.0
+pytest-cov

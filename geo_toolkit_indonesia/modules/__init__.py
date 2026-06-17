@@ -1,0 +1,1 @@
+"""GeoToolkit Indonesia – Module Registry"""
