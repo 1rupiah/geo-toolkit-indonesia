@@ -2,7 +2,7 @@
 
 **Portfolio Project by Rahmat Hidayat**
 
-Geoscientist turned Technology Professional - building tools at the intersection of earth science and software engineering.
+Geoscientist turned Technology Professional, building tools at the intersection of earth science and software engineering.
 
 Available for **freelance**, **consulting**, **contract**, and **full-time** opportunities.
 
@@ -36,27 +36,17 @@ This project demonstrates applied software engineering in a geoscience domain - 
 
 ## Visual Output
 
-### Borehole Log - Well SUMATRA-A-01, Minas Field
+### Borehole Log: Well SUMATRA-A-01, Minas Field
 
 Multi-track petrophysical log display showing GR, RHOB, NPHI, and RT curves from a sample LAS file. Each track includes min/max/avg statistics and is rendered with a clean, publication-ready layout.
 
-![Borehole Log](https://raw.githubusercontent.com/1rupiah/geo-toolkit-indonesia/main/docs/borehole_log_plot.png)
+![Borehole Log](docs/borehole_log_plot.png)
 
-### Seismic Survey Line - Jawa Barat Corridor
+### Seismic Survey Line: Jawa Barat Corridor
 
 Geographic survey line plot with labelled stations, direction arrow, total line length, and coordinate range info box. Rendered from real UTM/geographic coordinates.
 
-![Survey Line](https://raw.githubusercontent.com/1rupiah/geo-toolkit-indonesia/main/docs/survey_line_plot.png)
-
----
-
-## Test Report
-
-Full test documentation is available in the repository:
-
-[GeoToolkit Indonesia - Test Report (Excel)](https://github.com/1rupiah/geo-toolkit-indonesia/raw/main/docs/GeoToolkit%20Indonesia%20-%20Test%20Report.xlsx)
-
-53 tests across 6 test classes. All passed.
+![Survey Line](docs/survey_line_plot.png)
 
 ---
 
@@ -75,10 +65,6 @@ geo-toolkit-indonesia/
 │   └── data/sample/
 │       ├── WELL_A.LAS              # Sample LAS 2.0 file (synthetic Sumatra well)
 │       └── well_log_B.csv          # Sample CSV well log
-├── docs/
-│   ├── borehole_log_plot.png       # Sample borehole visualization output
-│   ├── survey_line_plot.png        # Sample survey line visualization output
-│   └── GeoToolkit Indonesia - Test Report.xlsx
 ├── tests/
 │   └── test_all_modules.py         # 53 unit + integration tests
 ├── demo.py                         # Automated demonstration script
@@ -94,8 +80,7 @@ geo-toolkit-indonesia/
 **Requirements:** Python 3.8 or higher.
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/1rupiah/geo-toolkit-indonesia.git
+# 1. Clone or extract the project
 cd geo-toolkit-indonesia
 
 # 2. Install dependencies
@@ -163,7 +148,7 @@ print(b.back_bearing)
 ```python
 from geo_toolkit_indonesia.modules.geological import read_las, read_well_log
 
-# Read a LAS file
+# Read a LAS file - point this at your own .las file
 las = read_las("path/to/your_well.las")
 print(las.summary())
 
@@ -189,7 +174,7 @@ from geo_toolkit_indonesia.modules.gis_export import (
     point_feature, linestring_feature, polygon_feature
 )
 
-# Create features
+# Create features with any metadata as keyword arguments
 well  = point_feature(-6.200, 106.816, name="Well-Jakarta-01", operator="Pertamina EP")
 line  = linestring_feature([(-6.2, 106.8), (-7.0, 107.8)], name="Seismic Line SL-001")
 block = polygon_feature(
@@ -207,6 +192,7 @@ to_kml([well, line, block], output_path="output/assets.kml")
 ### Module 5 - Visualization
 
 ```python
+import numpy as np
 from geo_toolkit_indonesia.modules.visualization import plot_survey_line, plot_borehole
 from geo_toolkit_indonesia.modules.geological import read_las
 
@@ -221,7 +207,7 @@ plot_survey_line(
     output_path="output/survey_line.png"
 )
 
-# Borehole log from a LAS file
+# Borehole log from a real LAS file
 las    = read_las("your_well.las")
 curves = {k: las.curves[k] for k in ["GR", "RHOB", "NPHI", "RT"] if k in las.curves}
 units  = {"GR": "gAPI", "RHOB": "g/cc", "NPHI": "v/v", "RT": "Ohm.m"}
@@ -239,7 +225,7 @@ plot_borehole(
 
 ## Running the Demo
 
-`demo.py` is a self-contained demonstration script that runs all five modules end-to-end using built-in sample data. No external files or inputs are required.
+`demo.py` is a self-contained demonstration script that runs all five modules end-to-end using built-in sample data. No external files or inputs are required - just run it and inspect the output.
 
 ```bash
 python demo.py
@@ -280,17 +266,15 @@ python -m pytest tests/ -v --cov=geo_toolkit_indonesia --cov-report=term-missing
 | Visualization         | 8     | Figure return, PNG file save, input validation                     |
 | Integration           | 3     | End-to-end pipelines across multiple modules                       |
 
-Full test documentation: [GeoToolkit Indonesia - Test Report](https://github.com/1rupiah/geo-toolkit-indonesia/raw/main/docs/GeoToolkit%20Indonesia%20-%20Test%20Report.xlsx)
-
 ---
 
 ## About the Author
 
-**Rahmat Hidayat** is a Jakarta-based professional with a background in geoscience and oil and gas who transitioned into technology in 2023. He brings a rare combination of subsurface domain expertise and software delivery experience - understanding both what the data means geologically and how to build reliable systems that work with it at scale.
+**Rahmat Hidayat** is a Jakarta-based professional with a background in geoscience and oil and gas who transitioned into technology in 2023. He brings a rare combination of subsurface domain expertise and software delivery experience, understanding both what the data means geologically and how to build reliable systems that work with it at scale.
 
 His experience spans geoscience fieldwork and interpretation, O&G project management, commercial management, and technology delivery across enterprise and government accounts in Indonesia.
 
-**GeoToolkit Indonesia** reflects a core belief: that deep domain knowledge, when combined with software engineering skills, produces tools that are genuinely useful - not just technically correct, but built around how geoscientists and engineers actually work. The coordinate systems are the ones used in Indonesian surveys. The well-log format is the one actually produced by logging tools in the field. The GIS export formats are the ones opened by the tools sitting on every geoscientist's desktop.
+**GeoToolkit Indonesia** reflects a core belief: that deep domain knowledge, when combined with software engineering skills, produces tools that are genuinely useful, not just technically correct, but built around how geoscientists and engineers actually work. The coordinate systems are the ones used in Indonesian surveys. The well-log format is the one actually produced by logging tools in the field. The GIS export formats are the ones opened by the tools sitting on every geoscientist's desktop.
 
 Open to freelance projects, consulting engagements, contract roles, and full-time opportunities in geoscience technology, digital transformation, data analytics, and software delivery.
 
