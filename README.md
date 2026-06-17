@@ -1,4 +1,4 @@
-# GeoToolkit Indonesia
+# Geo-Toolkit Indonesia
 
 **Portfolio Project by Rahmat Hidayat**
 
